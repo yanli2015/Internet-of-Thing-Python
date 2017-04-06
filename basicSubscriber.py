@@ -19,33 +19,6 @@ def customCallback(client, userdata, message):
     print("--------------\n\n")
 
 
-# Usage
-usageInfo = """Usage:
-
-Use certificate based mutual authentication:
-python basicPubSub.py -e <endpoint> -r <rootCAFilePath> -c <certFilePath> -k <privateKeyFilePath>
-
-Use MQTT over WebSocket:
-python basicPubSub.py -e <endpoint> -r <rootCAFilePath> -w
-
-Type "python basicPubSub.py -h" for available options.
-"""
-# Help info
-helpInfo = """-e, --endpoint
-	Your AWS IoT custom endpoint
--r, --rootCA
-	Root CA file path
--c, --cert
-	Certificate file path
--k, --key
-	Private key file path
--w, --websocket
-	Use MQTT over WebSocket
--h, --help
-	Help information
-
-
-"""
 
 # Read in command-line parameters
 useWebsocket = False
