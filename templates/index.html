@@ -1,0 +1,44 @@
+
+{% block body %}
+
+
+<h1>
+    <center>Temperature Monitor</center>
+</h1>
+
+<style>
+    table {
+        width: 60%;
+        min-width: 1100px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td{
+        padding: 5px;
+        text-align: center;
+
+    }
+
+    td:first-child {
+        text-align: left
+    }
+    .bolden{font-family:"Arial Black"}
+
+
+
+</style>
+
+<center>
+    <table id="t01">
+        <tr>
+            <th>TimeStamp</th>
+            <th>Temperature(Unit F)</th>
+        </tr>
+        <img src="{{ url_for('static', filename='foo.png')}}"></img>
+    </table>
+</center>
+{% endblock %}
+
