@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
 
-"""
 import os
 import re
 import flask
@@ -21,23 +19,12 @@ from flask import send_file
 app = Flask(__name__)
 app.secret_key = 'basic_secret'
 
-# @app.route('/index.html', methods=['GET'])
-# def show_customers():
-#     map = get_results_from_DB()
-#     map.sort(key=operator.itemgetter('TimeStamp'))
-#     return render_template('index.html', temp_list=map)
-
 
 @app.route('/index.html', methods=['GET'])
 def show_customers():
     dynamodb.create_image()
     return render_template('index.html')
 
-
-# @app.route('/get_image', methods=['GET'])
-# def get_image():
-#     filename = 'foo.png'
-#     return render_template(filename, mimetype='image/png')
 
 
 if __name__ == "__main__":
